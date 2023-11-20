@@ -11,7 +11,6 @@
 // right engine is OUTc and left is OUTb, Ball catcher is OUT_A
 bool turnarounddone;
 int w_counter = 0;
-
 bool pushobjdone = FALSE;
 bool obj_pushed = FALSE;
 bool isOnLine =  TRUE; //state.lightSensorValue < 37;
@@ -62,8 +61,8 @@ int is_on_line() {
     if (Sensor(IN_2) > THRESHOLD &&  Sensor(IN_3) <= THRESHOLD) {
        return 2;
     }
-
 }
+
 int drive_on_line() {
     while (is_on_line() == 0) {
         state = drive(rot_speed);
