@@ -5,15 +5,13 @@
 #define STATE_DRIVE 1
 #define STATE_TURNAROUND 2
 #define STATE_STOP 3
-# ello world
-
-
+#define rot_speed 40
 // Light sensors on in2 (L) and in3 (R)
 // right engine is OUTc and left is OUTb, Ball catcher is OUT_A
+
 bool turnarounddone;
 bool walls;
 int w_counter = 0;
-int rot_speed = 40;
 bool pushobjdone = FALSE;
 bool obj_pushed = FALSE;
 bool isOnLine =  TRUE; //state.lightSensorValue < 37;
