@@ -1,0 +1,171 @@
+#include "moving.h"
+#define THRESHOLD 35
+#define ULTRASONIC_PORT IN_1
+#define STATE_INIT 0
+#define STATE_DRIVE 1
+#define STATE_TURNAROUND 2
+#define STATE_STOP 3
+
+
+// Light sensors on in2 (L) and in3 (R)
+// right engine is OUTc and left is OUTb, Ball catcher is OUT_A
+bool turnarounddone;
+bool walls;
+int w_counter = 0;
+int rot_speed = 40;
+bool pushobjdone = FALSE;
+bool obj_pushed = FALSE;
+bool isOnLine =  TRUE; //state.lightSensorValue < 37;
+bool startline = FALSE;
+int state = STATE_INIT;
+int b_counter = 0;     //ball counter
+
+bool wallstop() {
+     // int dist = Sensor(IN_1);
+     if (SensorUS(ULTRASONIC_PORT) <= 20) {
+         // Off(OUT_BC);
+         return FALSE;
+     }
+     return TRUE;
+}
+
+int initialize() {
+    SetSensorLight(IN_2);
+    SetSensorLight(IN_3);
+    SetSensorLight(IN_4);
+    SetSensorLowspeed(ULTRASONIC_PORT);
+    Wait(1000);
+    return STATE_DRIVE;
+}
+
+bool balldrop(bool element) {
+    Off(OUT_BC);
+    Wait(1000);
+    RotateMotor(OUT_A, 45, -90);
+    RotateMotor(OUT_A, 20, 90);
+    element = FALSE;
+    return element;
+}
+
+int stopped() {
+    Off(OUT_BC);
+    Wait(600);
+    return STATE_DRIVE;
+}
+
+int is_on_line() {
+    if (Sensor(IN_2) > THRESHOLD &&  Sensor(IN_3) > THRESHOLD) {
+       return 0;
+    }
+    if (Sensor(IN_2) <= THRESHOLD &&  Sensor(IN_3) > THRESHOLD) {
+       return 1;
+    }
+    if (Sensor(IN_2) > THRESHOLD &&  Sensor(IN_3) <= THRESHOLD) {
+       return 2;
+    }
+
+}
+int drive_on_line() {
+    while (is_on_line() == 0) {
+        state = drive(rot_speed);
+        return STATE_DRIVE;
+    }
+    while (is_on_line() == 1) {
+       state = turnleft();
+       return STATE_DRIVE;
+    }
+    while (is_on_line() == 2){
+       state = turnright();
+       return STATE_DRIVE;
+    }
+
+    if (Sensor(IN_2) < THRESHOLD &&  Sensor(IN_3) < THRESHOLD) {
+        Wait(100);
+        state = stopped();
+        return STATE_STOP;
+    }
+}
+
+void task_init() {
+     // Acquire(moveMutex);
+     state = initialize();
+     // Release(moveMutex);
+}
+
+bool task_begin_with_turnaround(bool taskname) {
+     // Acquire(moveMutex);
+     if (SensorUS(ULTRASONIC_PORT) <= 20) {
+           state = turnaround();
+           taskname = TRUE;
+           return taskname;
+     } else {
+            state = drive_on_line();
+     }
+     // Release(moveMutex);
+}
+
+void task_follow_the_line() {
+     state = drive_on_line();
+}
+
+int push_obj_turn() {
+    RotateMotorEx(OUT_BC, 60, -255, -100, true, true);
+    // state = drive_on_line();
+    return STATE_DRIVE;
+}
+
+void task_push_the_ob() {
+     while (is_on_line() == 0) {
+           state = drive_on_line();
+
+           if (!obj_pushed) {
+              if (Sensor(IN_4) < THRESHOLD) {
+                 Wait(400);
+                 state = push_obj_turn();
+
+                 do {
+                    drive(30);
+                    if (SensorUS(IN_1) > 50) {
+                       PlayTone(261, 1000);
+                       OnRev(OUT_BC, 20);
+                       Wait(600);
+                       Off(OUT_BC);
+                       RotateMotorEx(OUT_BC, 60, 510, -100, true, true);
+                       obj_pushed = TRUE;
+                       break;
+                       // state = drive_on_line();
+
+                    }
+                 } while (!obj_pushed)
+              }
+           }
+
+              if (obj_pushed) {
+                 state = drive_on_line();
+                 if (Sensor(IN_4) < THRESHOLD) {
+                    Wait(450);
+                    RotateMotorEx(OUT_BC, 60, -255, -100, true, true);
+                    pushobjdone = TRUE;
+                    state = drive_on_line();
+                    break;
+
+                 }
+              }
+
+     }
+}
+
+task main() {
+     while (isOnLine) {
+           if (state == STATE_INIT) {
+              task_init();
+           }
+           turnarounddone = FALSE;
+           if ((state == STATE_DRIVE) && (!turnarounddone)) {
+              task_begin_with_turnaround(turnarounddone);
+           }
+           if ((state == STATE_DRIVE) && (turnarounddone)) {
+              task_follow_the_line();
+           }
+     }
+}
