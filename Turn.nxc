@@ -1,0 +1,11 @@
+void turnaround() {
+    RotateMotorEx(OUT_BC, 30, 465, -100, true, true);
+    // RotateMotorEx(OUT_BC, -30, 360, -100, true, true);
+    // RotateMotorEx(OUT_BC, -30, 360, 0, true, true);
+    Wait(600);
+    // return STATE_DRIVE;
+}
+
+task main() {
+     turnaround();
+}

@@ -1,0 +1,119 @@
+#define THRESHOLD 35
+#define ULTRASONIC_PORT IN_1
+#define STATE_INIT 0
+#define STATE_DRIVE 1
+#define STATE_STOP 2
+
+
+// Light sensors on in2 (L) and in3 (R)
+// right engine is OUTc and left is OUTb, Ball catcher is OUT_A
+
+bool walls;
+int ultrasonicCM;
+
+
+int turnaround() {
+    RotateMotorEx(OUT_BC, 60, 510, -100, true, true);
+    Wait(600);
+    return STATE_DRIVE;
+}
+
+bool wallstop() {
+     int dist = Sensor(IN_1);
+     if (dist <= 20) {
+         // Off(OUT_BC);
+         return FALSE;
+     }
+     return TRUE;
+}
+
+int initialize() {
+    SetSensorLight(IN_2);
+    SetSensorLight(IN_3);
+    SetSensorLowspeed(ULTRASONIC_PORT);
+    Wait(1000);
+    return STATE_DRIVE;
+}
+
+int turnright() {
+// move the left tire
+   Off(OUT_C);
+   OnFwd(OUT_B, 50);
+   return STATE_DRIVE;
+}
+
+int turnleft() {
+// move the right tire
+   Off(OUT_B);
+   OnFwd(OUT_C, 50);
+   return STATE_DRIVE;
+}
+
+int drive() {
+    OnFwd(OUT_BC, 40);
+    return STATE_DRIVE;
+}
+
+void balldrop() {
+    Off(OUT_BC);
+    Wait(1000);
+    RotateMotor(OUT_A, 45, -90);
+    RotateMotor(OUT_A, 20, 90);
+}
+
+int stopped() {
+    Off(OUT_BC);
+    Wait(600);
+    return STATE_DRIVE;
+}
+
+int state = STATE_INIT;
+int w_counter = 0;
+int b_counter = 0;     //ball counter
+task main() {
+     bool isOnLine =  true; //state.lightSensorValue < 37;
+     bool startline = FALSE;
+
+     while (isOnLine) {
+           if (state == STATE_INIT) {
+              state = initialize();
+           }
+           ultrasonicCM = SensorUS(ULTRASONIC_PORT);
+           if (state == STATE_DRIVE) {
+              if (Sensor(IN_2) > THRESHOLD &&  Sensor(IN_3) > THRESHOLD) {
+                 state = drive();
+              }
+              if (Sensor(IN_2) <= THRESHOLD &&  Sensor(IN_3) > THRESHOLD) {
+                 Wait(50);
+                 state = turnleft();
+              }
+              if (Sensor(IN_2) > THRESHOLD &&  Sensor(IN_3) <= THRESHOLD) {
+                 Wait(50);
+                 state = turnright();
+              }
+              if (Sensor(IN_2) < THRESHOLD &&  Sensor(IN_3) < THRESHOLD) {
+                 Wait(100);
+              }
+              if (ultrasonicCM < 20) {
+                 Off(OUT_BC);
+                 Wait(10);
+                 if (w_counter == 0) {
+                    turnaround();
+                    Wait(20);
+                    state = drive();
+                    w_counter++;
+                    }
+                 if (w_counter == 1) {
+                    Off(OUT_BC);
+                    w_counter++;
+                 }
+                 if (w_counter == 2) {
+                      Off(OUT_BC);
+                      balldrop();
+                 }
+              }
+
+           }
+           
+     }
+}

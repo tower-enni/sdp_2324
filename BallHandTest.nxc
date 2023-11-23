@@ -1,0 +1,11 @@
+void balldrop() {
+    // RotateMotorEx(OUT_A, 50, 90, -100, true, false);
+    RotateMotor(OUT_A, 30, 90);
+    RotateMotor(OUT_A, 30, -90);
+}
+
+
+
+task main() {
+     balldrop();
+}
