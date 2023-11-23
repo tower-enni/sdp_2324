@@ -5,7 +5,6 @@
 #define STATE_TURNAROUND 2
 #define STATE_STOP 3
 
-
 // Light sensors on in2 (L) and in3 (R)
 // right engine is OUTc and left is OUTb, Ball catcher is OUT_A
 bool turnarounddone;
@@ -14,9 +13,22 @@ int ultrasonicCM;
 int w_counter = 0;
 bool pushobjdone = FALSE;
 
+// Adjust rotation speed in relation to wheel size
+int rot_speed = 40;
+int d_speed = 40; // driving speed
+
+int initialize() {
+    SetSensorLight(IN_2);
+    SetSensorLight(IN_3);
+    SetSensorLight(IN_4);
+    SetSensorLowspeed(ULTRASONIC_PORT);
+    Wait(1000);
+    return STATE_DRIVE;
+}
 
 int turnaround() {
     Off(OUT_BC);
+    // Adjust variables due to bigger wheels
     RotateMotorEx(OUT_BC, 60, 510, -100, true, true);
     PlayTone(220, 100);
     Wait(600);
@@ -33,28 +45,19 @@ bool wallstop() {
      return TRUE;
 }
 
-int initialize() {
-    SetSensorLight(IN_2);
-    SetSensorLight(IN_3);
-    SetSensorLight(IN_4);
-    SetSensorLowspeed(ULTRASONIC_PORT);
-    Wait(1000);
-    return STATE_DRIVE;
-}
-
 int turnright() {
 // move the left tire
    //RotateMotorEx(OUT_BC, 60, -25, -100, true, true);
-   OnRev(OUT_C, 40);
-   OnFwd(OUT_B, 40);
+   OnRev(OUT_C, rot_speed);
+   OnFwd(OUT_B, rot_speed);
    return STATE_DRIVE;
 }
 
 int turnleft() {
 // move the right tire
    // RotateMotorEx(OUT_BC, 60, 25, -100, true, true);
-   OnRev(OUT_B, 40);
-   OnFwd(OUT_C, 40);
+   OnRev(OUT_B, rot_speed);
+   OnFwd(OUT_C, rot_speed);
    return STATE_DRIVE;
 }
 
@@ -95,7 +98,7 @@ int is_on_line() {
 }
 int drive_on_line() {
     while (is_on_line() == 0) {
-        state = drive(40);
+        state = drive(d_speed);
         return STATE_DRIVE;
     }
     while (is_on_line() == 1) {

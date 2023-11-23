@@ -1,0 +1,961 @@
+#SYMBOLS
+Index	Identifier	Type	Flag	Data	Size	RefCount
+0	__D0stopped	6	1	0	4	2
+1	__D0task_begin_with_turnaround	6	1	4	4	6
+2	__D0main	6	1	8	4	18
+3	__DU0main	5	1	12	4	9
+4	__D0turnleft	6	1	16	4	6
+5	__D0turnright	6	1	20	4	6
+6	__DU0task_begin_with_turnaround	5	1	24	4	2
+7	__D0turnaround	6	1	28	4	7
+8	__D0is_on_line	6	1	32	4	30
+9	__CLSRMutex0	9	0	36	4	2
+10	__RLSBmutex0	9	0	40	4	2
+11	__CLSCSMutex0	9	0	44	4	2
+12	__CLSWMutex0	9	0	48	4	2
+13	__D0drive_on_line	6	1	52	4	26
+14	__D0initialize	6	1	56	4	2
+15	__SPTArgsMutex	9	0	60	4	2
+16	__D0drive	6	1	64	4	4
+17	__signed_stack_003turnaround	6	1	68	4	4
+18	__signed_stack_004turnaround	6	1	72	4	2
+19	__signed_stack_001turnaround	6	1	76	4	4
+20	__signed_stack_002turnaround	6	1	80	4	4
+21	__Wait_7qG2_ms_7qG2_000_inline_stopped	5	1	84	4	2
+22	__Wait_7qG2_ms_7qG2_000_inline_drive_on_line	5	1	88	4	2
+23	__Wait_7qG2_ms_7qG2_000_inline_initialize	5	1	92	4	2
+24	__Wait_7qG2_ms_7qG2_000_inline_turnaround	5	1	96	4	2
+25	__signed_stack_001task_begin_with_turnaround	6	1	100	4	2
+26	__D0SetSensorLowspeed_inline_initialize	6	1	104	4	2
+27	__DU0SetSensorLowspeed_inline_initialize	5	1	108	4	5
+28	__D0SetSensorLight_inline_initialize	6	1	112	4	6
+29	__DU0SetSensorLight_inline_initialize	5	1	116	4	15
+30	__signed_stack_001is_on_line	6	1	120	4	12
+31	__signed_stack_001main	6	1	124	4	6
+32	__signed_stack_001drive	6	1	128	4	2
+33	__signed_stack_001drive_on_line	6	1	132	4	10
+34	__rotateMutex1	9	0	136	4	2
+35	__rotate_theAngle5	5	1	140	4	2
+36	__OnRevMutex	9	0	144	4	4
+37	__rotateMutex2	9	0	148	4	2
+38	__rotate_angle5	6	1	152	4	5
+39	state	4	1	156	2	11
+40	__drive_7qG2_speed_7qG2_000	4	1	158	2	2
+41	__rotate_OldRotCount5	4	1	160	2	2
+42	rot_speed	4	0	162	2	4
+43	d_speed	4	0	164	2	1
+44	__rotate_RotCount5	4	1	166	2	4
+45	__SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initialize	1	1	168	1	6
+46	__ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initialize	1	1	169	1	3
+47	__SetSensorLowspeed_7qG2_port_7qG2_000_inline_initialize	1	1	170	1	4
+48	__SetSensorLowspeed_7qG2_bIsPowered_7qG2_000_inline_initialize	1	1	171	1	2
+49	__SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLight_inline_initialize	1	1	172	1	6
+50	__initialize_return	1	1	173	1	4
+51	turnarounddone	1	1	174	1	5
+52	__rotate_power5	1	1	175	1	4
+53	__SetSensorLight_7qG2_port_7qG2_000_inline_initialize	1	1	176	1	15
+54	__SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLight_inline_initialize	1	1	177	1	6
+55	__SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initialize	1	1	178	1	6
+56	__SetSensorLight_7qG2_bActive_7qG2_000_inline_initialize	1	1	179	1	6
+57	__SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_initialize	1	1	180	1	2
+58	__drive_on_line_return	1	1	181	1	8
+59	__task_init_return	1	1	182	1	3
+60	__OnRev_Tmp	2	1	183	1	4
+61	__is_on_line_return	1	1	184	1	8
+62	__task_begin_with_turnaround_7qG2_taskname_7qG2_000	1	1	185	1	3
+63	____initialize_global_data_return	1	1	186	1	3
+64	__main_7qG2_isOnLine_7qG2_000	1	1	187	1	2
+65	__task_begin_with_turnaround_return	1	1	188	1	4
+66	__task_follow_the_line_return	1	1	189	1	3
+67	__stopped_return	1	1	190	1	4
+68	__SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLowspeed_inline_initialize	1	1	191	1	2
+69	__turnaround_return	1	1	192	1	4
+70	__SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLowspeed_inline_initialize	1	1	193	1	2
+71	__SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_initialize	1	1	194	1	2
+72	__constVal96	2	0	195	1	8
+73	__turnleft_return	1	1	196	1	4
+74	__drive_return	1	1	197	1	4
+75	__constVal63	2	0	198	1	7
+76	__turnright_return	1	1	199	1	4
+77	__rotate_firstPort5	1	1	200	1	5
+78	__constValNeg100	2	0	201	1	1
+79	__PFTmp	1	1	202	1	1
+80	__RLSBIterations0	1	1	203	1	4
+81	__constVal2	2	0	204	1	6
+82	____RotateMotor5_return	1	1	205	1	3
+83	__constVal50	2	0	206	1	1
+84	__constVal15	2	0	207	1	4
+85	__constVal7	2	0	208	1	1
+86	__RLSBytesCount0	1	1	209	1	7
+87	__ResetSensorPort	1	1	210	1	6
+88	__constVal3	2	0	211	1	6
+89	____ResetSensorSubroutine_return	1	1	212	1	6
+90	__ResetSensorTmp	1	1	213	1	2
+91	____RotateMotor5_sign_tmp	2	1	214	1	4
+92	__RLSBResult0	2	1	215	1	7
+93	__LSWriteOptions0	1	1	216	1	1
+94	____ReadLSBytes0_return	1	1	217	1	3
+95	__rotate_theRS5	1	1	218	1	3
+96	__rotate_theRM5	1	1	219	1	4
+97	__rotate_theRVI5	1	1	220	1	2
+98	__rotate_theRVP5	1	1	221	1	2
+99	__rotate_theOM5	1	1	222	1	7
+100	__rotate_turnpct5	2	1	223	1	3
+101	__rotate_stop5	1	1	224	1	2
+102	__rotate_sync5	1	1	225	1	2
+103	__rotate_theUF5	1	1	226	1	6
+104	__constVal32	2	0	227	1	25
+105	__rotate_theTurnPct5	2	1	228	1	4
+106	__constVal0	2	1	229	1	28
+107	__constVal1	2	0	230	1	15
+108	__rotate_thePower5	2	1	231	1	4
+109	__rotate_theRVD5	1	1	232	1	2
+110	__rotate_rs5	1	1	233	1	2
+111	__CLSWArgs0	8	0	4	12	5
+112	__CLSWArgs0.Result	2	1	236	1	5
+113	__CLSWArgs0.Port	1	1	237	1	5
+114	__CLSWArgs0.Buffer	7	0	238	4	5
+115	__CLSWArgs0.Buffer.Buffer_type	1	0	0	1	0
+116	__CLSWArgs0.ReturnLen	1	1	240	1	5
+117	__CLSRArgs0	8	0	4	12	5
+118	__CLSRArgs0.Result	2	1	244	1	5
+119	__CLSRArgs0.Port	1	1	245	1	5
+120	__CLSRArgs0.Buffer	7	0	246	4	5
+121	__CLSRArgs0.Buffer.Buffer_type	1	0	0	1	0
+122	__CLSRArgs0.BufferLen	1	1	248	1	5
+123	__SPTArgs	8	0	5	8	6
+124	__SPTArgs.Result	2	1	252	1	6
+125	__SPTArgs.Frequency	3	1	254	2	6
+126	__SPTArgs.Duration	3	1	256	2	6
+127	__SPTArgs.Loop	1	1	258	1	6
+128	__SPTArgs.Volume	1	1	259	1	6
+129	__CLSCSArgs0	8	0	3	4	4
+130	__CLSCSArgs0.Result	2	1	260	1	4
+131	__CLSCSArgs0.Port	1	1	261	1	4
+132	__CLSCSArgs0.BytesReady	1	1	262	1	4
+133	__rotate_ports5	7	0	264	4	6
+134	__rotate_ports5.__rotate_ports5_type	1	0	0	1	0
+135	__RLSLastGoodRead0	7	0	266	4	2
+136	__RLSLastGoodRead0.__RLSLastGoodRead0_type	1	0	0	1	0
+137	__RLSReadBuf0	7	0	268	4	8
+138	__RLSReadBuf0.__RLSReadBuf0_type	1	0	0	1	0
+139	__OUT_BC	7	0	270	4	4
+140	__OUT_BC.__OUT_BC_type	1	0	0	1	0
+141	__RLSBbufLSWrite1	7	0	272	4	1
+142	__RLSBbufLSWrite1.__RLSBbufLSWrite1_type	1	0	0	1	0
+#SOURCES
+Clump	Line	PC	Source
+0	215	0	#line 215 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	216	0		subcall __initialize_global_data, ____initialize_global_data_return
+0	215	2	#line 215 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	216	2	#line 216 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	217	2		set __main_7qG2_isOnLine_7qG2_000, 1
+0	216	5	#line 216 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	217	5	#line 217 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	217	5	#line 217 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	217	5	#line 217 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	218	5		mov __DU0main, __main_7qG2_isOnLine_7qG2_000
+0	218	7	#line 218 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	219	7		tst 5, __D0main, __DU0main
+0	218	10	#line 218 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	219	10		brtst 4, __ASM_Label_724, __D0main
+0	218	13	#line 218 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	219	13		mov __signed_stack_001main, state
+0	218	15	#line 218 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	218	15	#line 218 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	219	15		set __D0main, 0
+0	218	18	#line 218 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	219	18		cmp 4, __D0main, __signed_stack_001main, __D0main
+0	219	22	#line 219 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	220	22		brtst 4, __ASM_Label_729, __D0main
+0	220	25	#line 220 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	221	25		subcall task_init, __task_init_return
+0	220	27	#line 220 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	222	27	#line 222 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	223	27	#line 223 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	224	27		set turnarounddone, 0
+0	223	30	#line 223 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	223	30	#line 223 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	223	30	#line 223 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	224	30		mov __signed_stack_001main, state
+0	223	32	#line 223 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	223	32	#line 223 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	224	32		set __D0main, 1
+0	223	35	#line 223 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	224	35		cmp 4, __D0main, __signed_stack_001main, __D0main
+0	223	39	#line 223 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	224	39		brtst 4, __ASM_Label_733, __D0main
+0	223	42	#line 223 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	224	42		mov __DU0main, turnarounddone
+0	223	44	#line 223 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	224	44		not __DU0main, __DU0main
+0	223	47	#line 223 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	224	47		tst 5, __D0main, __DU0main
+0	224	50	#line 224 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	225	50		brtst 4, __ASM_Label_738, __D0main
+0	224	53	#line 224 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	225	53		mov __task_begin_with_turnaround_7qG2_taskname_7qG2_000, turnarounddone
+0	224	55	#line 224 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	225	55	#line 225 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	226	55		subcall task_begin_with_turnaround, __task_begin_with_turnaround_return
+0	225	57	#line 225 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	226	57		mov __DU0main, __DU0task_begin_with_turnaround
+0	225	59	#line 225 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	226	59	#line 226 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	226	59	#line 226 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	227	59		mov __signed_stack_001main, state
+0	226	61	#line 226 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	226	61	#line 226 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	227	61		set __D0main, 1
+0	226	64	#line 226 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	227	64		cmp 4, __D0main, __signed_stack_001main, __D0main
+0	226	68	#line 226 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	227	68		brtst 4, __ASM_Label_742, __D0main
+0	226	71	#line 226 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	227	71		mov __DU0main, turnarounddone
+0	226	73	#line 226 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	227	73		tst 5, __D0main, __DU0main
+0	227	76	#line 227 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	228	76		brtst 4, __ASM_Label_747, __D0main
+0	228	79	#line 228 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	229	79		subcall task_follow_the_line, __task_follow_the_line_return
+0	228	81	#line 228 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	230	81	#line 230 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	232	81	#line 232 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	233	81		jmp __ASM_Label_723
+0	232	83	#line 232 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+0	233	83		exit -1, -1
+1	5332	0		brtst 4, __rotate_Done5, __rotate_angle5
+1	5333	3		set ____RotateMotor5_sign_tmp, 0
+1	5333	6		brtst EQ, __sign_5, __rotate_angle5
+1	5333	9		set ____RotateMotor5_sign_tmp, -1
+1	5333	12		brtst LT, __sign_5, __rotate_angle5
+1	5333	15		set ____RotateMotor5_sign_tmp, 1
+1	5333	18	__sign_5:	mov __rotate_thePower5, ____RotateMotor5_sign_tmp
+1	5334	20		abs __rotate_theAngle5, __rotate_angle5
+1	5335	23		mul __rotate_thePower5, __rotate_thePower5, __rotate_power5
+1	5337	27		set __rotate_theUF5, 23
+1	5338	30		brtst 4, __rotate_NoSync5, __rotate_sync5
+1	5339	33		set __rotate_theOM5, 7
+1	5340	36		set __rotate_theRM5, 2
+1	5341	39		mov __rotate_theTurnPct5, __rotate_turnpct5
+1	5342	41		brtst 4, __rotate_Start5, __rotate_theTurnPct5
+1	5343	44		add __rotate_theUF5, __rotate_theUF5, __constVal32
+1	5344	48		jmp __rotate_Start5
+1	5346	50		set __rotate_theOM5, 3
+1	5347	53		set __rotate_theRM5, 0
+1	5348	56		set __rotate_theTurnPct5, 0
+1	5350	59		set __rotate_theRS5, 32
+1	5351	62		setout __rotate_ports5, 1, __rotate_theOM5, 8, __rotate_theRM5, 5, __rotate_theAngle5, 6, __rotate_theRS5, 10, __rotate_theRVP5, 11, __rotate_theRVI5, 12, __rotate_theRVD5, 2, __rotate_thePower5, 7, __rotate_turnpct5, 0, __rotate_theUF5
+1	5354	85		index __rotate_firstPort5, __rotate_ports5, 65535
+1	5356	89		getout __rotate_power5, __rotate_firstPort5, 2
+1	5357	93		brtst 4, __rotate_doneRunning5, __rotate_power5
+1	5358	96		getout __rotate_rs5, __rotate_firstPort5, 6
+1	5359	100		brcmp 4, __rotate_Running5, __rotate_rs5, __constVal32
+1	5361	104		brtst 4, __rotate_Reset5, __rotate_stop5
+1	5363	107		set __rotate_theOM5, 7
+1	5364	110		set __rotate_theUF5, 7
+1	5365	113		setout __rotate_ports5, 1, __rotate_theOM5, 8, __constVal1, 6, __rotate_theRS5, 2, __constVal0, 5, __constVal0, 0, __rotate_theUF5
+1	5367	128		getout __rotate_RotCount5, __rotate_firstPort5, 14
+1	5369	132		mov __rotate_OldRotCount5, __rotate_RotCount5
+1	5370	134		wait2 NA, __constVal50
+1	5372	137		getout __rotate_RotCount5, __rotate_firstPort5, 14
+1	5373	141		brcmp 5, __rotate_Stabilize5, __rotate_OldRotCount5, __rotate_RotCount5
+1	5374	145		set __rotate_theOM5, 4
+1	5375	148		setout __rotate_ports5, 8, __rotate_theRM5, 6, __constVal0, 1, __rotate_theOM5, 0, __constVal1
+1	5378	159		brtst 4, __rotate_Done5, __rotate_theTurnPct5
+1	5379	162		setout __rotate_ports5, 0, __constVal32
+1	5381	167		subret ____RotateMotor5_return
+2	5476	0		setin __constVal1, __ResetSensorPort, 5
+2	5478	4		getin __ResetSensorTmp, __ResetSensorPort, 5
+2	5479	8		brtst 5, __SensorStillInvalid, __ResetSensorTmp
+2	5480	11		subret ____ResetSensorSubroutine_return
+3	6281	0	#pragma macro 25
+3	6281	0		acquire __CLSWMutex0
+3	6281	1		or __CLSWArgs0.Port, __constVal0, __LSWriteOptions0
+3	6281	5		mov __CLSWArgs0.ReturnLen, __RLSBytesCount0
+3	6281	7		mov __CLSWArgs0.Buffer, __RLSReadBuf0
+3	6281	9		syscall 21, __CLSWArgs0
+3	6281	12		mov __RLSBResult0, __CLSWArgs0.Result
+3	6281	14		release __CLSWMutex0
+3	6282	15	#line 6282 "NXTDefs.h"
+3	6283	15		brtst 5, __RLSBError0, __RLSBResult0
+3	6284	18		set __RLSBIterations0, 60
+3	6286	21	#pragma macro 23
+3	6286	21		acquire __CLSCSMutex0
+3	6286	22		set __CLSCSArgs0.Port, 0
+3	6286	25		syscall 23, __CLSCSArgs0
+3	6286	28		mov __RLSBytesCount0, __CLSCSArgs0.BytesReady
+3	6286	30		mov __RLSBResult0, __CLSCSArgs0.Result
+3	6286	32		release __CLSCSMutex0
+3	6286	33	#line 6286 "NXTDefs.h"
+3	6287	33		sub __RLSBIterations0, __RLSBIterations0, __constVal1
+3	6288	37		brtst 2, __RLSBError0, __RLSBIterations0
+3	6289	40		brtst 0, __RLSBError0, __RLSBResult0
+3	6290	43		brtst 4, __RLSBReadyToRead0, __RLSBResult0
+3	6292	46		wait2 NA, __constVal1
+3	6293	49		jmp __RLSBDoCheckStatus0
+3	6295	51		brtst 4, __RLSBReturn0, __RLSBytesCount0
+3	6296	54		arrinit __RLSReadBuf0, __constVal0, __RLSBytesCount0
+3	6298	58	#pragma macro 25
+3	6298	58		acquire __CLSRMutex0
+3	6298	59		set __CLSRArgs0.Port, 0
+3	6298	62		mov __CLSRArgs0.BufferLen, __RLSBytesCount0
+3	6298	64		syscall 22, __CLSRArgs0
+3	6298	67		mov __RLSReadBuf0, __CLSRArgs0.Buffer
+3	6298	69		mov __RLSBResult0, __CLSRArgs0.Result
+3	6298	71		release __CLSRMutex0
+3	6298	72	#line 6298 "NXTDefs.h"
+3	6299	72		brtst 5, __RLSBError0, __RLSBResult0
+3	6300	75		mov __RLSLastGoodRead0, __RLSReadBuf0
+3	6301	77		jmp __RLSBDone0
+3	6303	79		mov __RLSReadBuf0, __RLSLastGoodRead0
+3	6305	81		arrsize __RLSBytesCount0, __RLSReadBuf0
+3	6307	84		subret ____ReadLSBytes0_return
+4	20	0	#line 20 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	21	0		set __SetSensorLight_7qG2_port_7qG2_000_inline_initialize, 1
+4	20	3	#line 20 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	21	3	#line 21 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	22	3		mov __SetSensorLight_7qG2_bActive_7qG2_000_inline_initialize, __constVal1
+4	4313	5	#line 4313 "NXCDefs.h"
+4	4314	5		mov __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initialize, __SetSensorLight_7qG2_port_7qG2_000_inline_initialize
+4	4313	7	#line 4313 "NXCDefs.h"
+4	4313	7	#line 4313 "NXCDefs.h"
+4	4314	7		mov __DU0SetSensorLight_inline_initialize, __SetSensorLight_7qG2_bActive_7qG2_000_inline_initialize
+4	4313	9	#line 4313 "NXCDefs.h"
+4	4314	9		tst 5, __D0SetSensorLight_inline_initialize, __DU0SetSensorLight_inline_initialize
+4	4313	12	#line 4313 "NXCDefs.h"
+4	4314	12		brtst 4, __001__ASM_Label_4, __D0SetSensorLight_inline_initialize
+4	4313	15	#line 4313 "NXCDefs.h"
+4	4314	15		set __DU0SetSensorLight_inline_initialize, 5
+4	4313	18	#line 4313 "NXCDefs.h"
+4	4313	18	#line 4313 "NXCDefs.h"
+4	4314	18		jmp __001__ASM_Label_5
+4	4313	20	#line 4313 "NXCDefs.h"
+4	4314	20		set __DU0SetSensorLight_inline_initialize, 6
+4	4313	23	#line 4313 "NXCDefs.h"
+4	4313	23	#line 4313 "NXCDefs.h"
+4	4314	23		mov __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLight_inline_initialize, __DU0SetSensorLight_inline_initialize
+4	4247	25	#line 4247 "NXCDefs.h"
+4	4248	25		setin __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLight_inline_initialize, __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initialize, 0
+4	4247	29	#line 4247 "NXCDefs.h"
+4	4314	29	#line 4314 "NXCDefs.h"
+4	4314	29	#line 4314 "NXCDefs.h"
+4	4315	29		mov __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initialize, __SetSensorLight_7qG2_port_7qG2_000_inline_initialize
+4	4314	31	#line 4314 "NXCDefs.h"
+4	4314	31	#line 4314 "NXCDefs.h"
+4	4315	31		set __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLight_inline_initialize, 128
+4	4314	34	#line 4314 "NXCDefs.h"
+4	4260	34	#line 4260 "NXCDefs.h"
+4	4261	34		setin __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLight_inline_initialize, __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initialize, 1
+4	4260	38	#line 4260 "NXCDefs.h"
+4	4315	38	#line 4315 "NXCDefs.h"
+4	4315	38	#line 4315 "NXCDefs.h"
+4	4316	38		mov __ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initialize, __SetSensorLight_7qG2_port_7qG2_000_inline_initialize
+4	4315	40	#line 4315 "NXCDefs.h"
+4	4278	40	#line 4278 "NXCDefs.h"
+4	4279	40	#pragma macro 4
+4	4279	40		mov __ResetSensorPort, __SetSensorLight_7qG2_port_7qG2_000_inline_initialize
+4	4279	42		subcall __ResetSensorSubroutine, ____ResetSensorSubroutine_return
+4	4982	44	#line 4982 "NXCDefs.h"
+4	4278	44	#line 4278 "NXCDefs.h"
+4	4316	44	#line 4316 "NXCDefs.h"
+4	21	44	#line 21 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	21	44	#line 21 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	22	44		set __SetSensorLight_7qG2_port_7qG2_000_inline_initialize, 2
+4	21	47	#line 21 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	22	47	#line 22 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	23	47		mov __SetSensorLight_7qG2_bActive_7qG2_000_inline_initialize, __constVal1
+4	4313	49	#line 4313 "NXCDefs.h"
+4	4314	49		mov __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initialize, __SetSensorLight_7qG2_port_7qG2_000_inline_initialize
+4	4313	51	#line 4313 "NXCDefs.h"
+4	4313	51	#line 4313 "NXCDefs.h"
+4	4314	51		mov __DU0SetSensorLight_inline_initialize, __SetSensorLight_7qG2_bActive_7qG2_000_inline_initialize
+4	4313	53	#line 4313 "NXCDefs.h"
+4	4314	53		tst 5, __D0SetSensorLight_inline_initialize, __DU0SetSensorLight_inline_initialize
+4	4313	56	#line 4313 "NXCDefs.h"
+4	4314	56		brtst 4, __002__ASM_Label_4, __D0SetSensorLight_inline_initialize
+4	4313	59	#line 4313 "NXCDefs.h"
+4	4314	59		set __DU0SetSensorLight_inline_initialize, 5
+4	4313	62	#line 4313 "NXCDefs.h"
+4	4313	62	#line 4313 "NXCDefs.h"
+4	4314	62		jmp __002__ASM_Label_5
+4	4313	64	#line 4313 "NXCDefs.h"
+4	4314	64		set __DU0SetSensorLight_inline_initialize, 6
+4	4313	67	#line 4313 "NXCDefs.h"
+4	4313	67	#line 4313 "NXCDefs.h"
+4	4314	67		mov __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLight_inline_initialize, __DU0SetSensorLight_inline_initialize
+4	4247	69	#line 4247 "NXCDefs.h"
+4	4248	69		setin __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLight_inline_initialize, __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initialize, 0
+4	4247	73	#line 4247 "NXCDefs.h"
+4	4314	73	#line 4314 "NXCDefs.h"
+4	4314	73	#line 4314 "NXCDefs.h"
+4	4315	73		mov __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initialize, __SetSensorLight_7qG2_port_7qG2_000_inline_initialize
+4	4314	75	#line 4314 "NXCDefs.h"
+4	4314	75	#line 4314 "NXCDefs.h"
+4	4315	75		set __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLight_inline_initialize, 128
+4	4314	78	#line 4314 "NXCDefs.h"
+4	4260	78	#line 4260 "NXCDefs.h"
+4	4261	78		setin __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLight_inline_initialize, __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initialize, 1
+4	4260	82	#line 4260 "NXCDefs.h"
+4	4315	82	#line 4315 "NXCDefs.h"
+4	4315	82	#line 4315 "NXCDefs.h"
+4	4316	82		mov __ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initialize, __SetSensorLight_7qG2_port_7qG2_000_inline_initialize
+4	4315	84	#line 4315 "NXCDefs.h"
+4	4278	84	#line 4278 "NXCDefs.h"
+4	4279	84	#pragma macro 4
+4	4279	84		mov __ResetSensorPort, __SetSensorLight_7qG2_port_7qG2_000_inline_initialize
+4	4279	86		subcall __ResetSensorSubroutine, ____ResetSensorSubroutine_return
+4	5045	88	#line 5045 "NXCDefs.h"
+4	4278	88	#line 4278 "NXCDefs.h"
+4	4316	88	#line 4316 "NXCDefs.h"
+4	22	88	#line 22 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	22	88	#line 22 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	23	88		set __SetSensorLight_7qG2_port_7qG2_000_inline_initialize, 3
+4	22	91	#line 22 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	23	91	#line 23 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	24	91		mov __SetSensorLight_7qG2_bActive_7qG2_000_inline_initialize, __constVal1
+4	4313	93	#line 4313 "NXCDefs.h"
+4	4314	93		mov __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initialize, __SetSensorLight_7qG2_port_7qG2_000_inline_initialize
+4	4313	95	#line 4313 "NXCDefs.h"
+4	4313	95	#line 4313 "NXCDefs.h"
+4	4314	95		mov __DU0SetSensorLight_inline_initialize, __SetSensorLight_7qG2_bActive_7qG2_000_inline_initialize
+4	4313	97	#line 4313 "NXCDefs.h"
+4	4314	97		tst 5, __D0SetSensorLight_inline_initialize, __DU0SetSensorLight_inline_initialize
+4	4313	100	#line 4313 "NXCDefs.h"
+4	4314	100		brtst 4, __003__ASM_Label_4, __D0SetSensorLight_inline_initialize
+4	4313	103	#line 4313 "NXCDefs.h"
+4	4314	103		set __DU0SetSensorLight_inline_initialize, 5
+4	4313	106	#line 4313 "NXCDefs.h"
+4	4313	106	#line 4313 "NXCDefs.h"
+4	4314	106		jmp __003__ASM_Label_5
+4	4313	108	#line 4313 "NXCDefs.h"
+4	4314	108		set __DU0SetSensorLight_inline_initialize, 6
+4	4313	111	#line 4313 "NXCDefs.h"
+4	4313	111	#line 4313 "NXCDefs.h"
+4	4314	111		mov __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLight_inline_initialize, __DU0SetSensorLight_inline_initialize
+4	4247	113	#line 4247 "NXCDefs.h"
+4	4248	113		setin __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLight_inline_initialize, __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initialize, 0
+4	4247	117	#line 4247 "NXCDefs.h"
+4	4314	117	#line 4314 "NXCDefs.h"
+4	4314	117	#line 4314 "NXCDefs.h"
+4	4315	117		mov __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initialize, __SetSensorLight_7qG2_port_7qG2_000_inline_initialize
+4	4314	119	#line 4314 "NXCDefs.h"
+4	4314	119	#line 4314 "NXCDefs.h"
+4	4315	119		set __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLight_inline_initialize, 128
+4	4314	122	#line 4314 "NXCDefs.h"
+4	4260	122	#line 4260 "NXCDefs.h"
+4	4261	122		setin __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLight_inline_initialize, __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initialize, 1
+4	4260	126	#line 4260 "NXCDefs.h"
+4	4315	126	#line 4315 "NXCDefs.h"
+4	4315	126	#line 4315 "NXCDefs.h"
+4	4316	126		mov __ResetSensor_7qG2_port_7qG2_000_inline_SetSensorLight_inline_initialize, __SetSensorLight_7qG2_port_7qG2_000_inline_initialize
+4	4315	128	#line 4315 "NXCDefs.h"
+4	4278	128	#line 4278 "NXCDefs.h"
+4	4279	128	#pragma macro 4
+4	4279	128		mov __ResetSensorPort, __SetSensorLight_7qG2_port_7qG2_000_inline_initialize
+4	4279	130		subcall __ResetSensorSubroutine, ____ResetSensorSubroutine_return
+4	5108	132	#line 5108 "NXCDefs.h"
+4	4278	132	#line 4278 "NXCDefs.h"
+4	4316	132	#line 4316 "NXCDefs.h"
+4	23	132	#line 23 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	23	132	#line 23 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	24	132		set __SetSensorLowspeed_7qG2_port_7qG2_000_inline_initialize, 0
+4	23	135	#line 23 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	24	135	#line 24 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	25	135		mov __SetSensorLowspeed_7qG2_bIsPowered_7qG2_000_inline_initialize, __constVal1
+4	4342	137	#line 4342 "NXCDefs.h"
+4	4343	137		mov __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_initialize, __SetSensorLowspeed_7qG2_port_7qG2_000_inline_initialize
+4	4342	139	#line 4342 "NXCDefs.h"
+4	4342	139	#line 4342 "NXCDefs.h"
+4	4343	139		mov __DU0SetSensorLowspeed_inline_initialize, __SetSensorLowspeed_7qG2_bIsPowered_7qG2_000_inline_initialize
+4	4342	141	#line 4342 "NXCDefs.h"
+4	4343	141		tst 5, __D0SetSensorLowspeed_inline_initialize, __DU0SetSensorLowspeed_inline_initialize
+4	4342	144	#line 4342 "NXCDefs.h"
+4	4343	144		brtst 4, __004__ASM_Label_36, __D0SetSensorLowspeed_inline_initialize
+4	4342	147	#line 4342 "NXCDefs.h"
+4	4343	147		set __DU0SetSensorLowspeed_inline_initialize, 11
+4	4342	150	#line 4342 "NXCDefs.h"
+4	4342	150	#line 4342 "NXCDefs.h"
+4	4343	150		jmp __004__ASM_Label_37
+4	4342	152	#line 4342 "NXCDefs.h"
+4	4343	152		set __DU0SetSensorLowspeed_inline_initialize, 10
+4	4342	155	#line 4342 "NXCDefs.h"
+4	4342	155	#line 4342 "NXCDefs.h"
+4	4343	155		mov __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLowspeed_inline_initialize, __DU0SetSensorLowspeed_inline_initialize
+4	4247	157	#line 4247 "NXCDefs.h"
+4	4248	157		setin __SetSensorType_7qG2_type_7qG2_000_inline_SetSensorLowspeed_inline_initialize, __SetSensorType_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_initialize, 0
+4	4247	161	#line 4247 "NXCDefs.h"
+4	4343	161	#line 4343 "NXCDefs.h"
+4	4343	161	#line 4343 "NXCDefs.h"
+4	4344	161		mov __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_initialize, __SetSensorLowspeed_7qG2_port_7qG2_000_inline_initialize
+4	4343	163	#line 4343 "NXCDefs.h"
+4	4343	163	#line 4343 "NXCDefs.h"
+4	4344	163		set __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLowspeed_inline_initialize, 0
+4	4343	166	#line 4343 "NXCDefs.h"
+4	4260	166	#line 4260 "NXCDefs.h"
+4	4261	166		setin __SetSensorMode_7qG2_mode_7qG2_000_inline_SetSensorLowspeed_inline_initialize, __SetSensorMode_7qG2_port_7qG2_000_inline_SetSensorLowspeed_inline_initialize, 1
+4	4260	170	#line 4260 "NXCDefs.h"
+4	4344	170	#line 4344 "NXCDefs.h"
+4	4344	170	#line 4344 "NXCDefs.h"
+4	4344	170	#line 4344 "NXCDefs.h"
+4	4278	170	#line 4278 "NXCDefs.h"
+4	4279	170	#pragma macro 4
+4	4279	170		mov __ResetSensorPort, __SetSensorLowspeed_7qG2_port_7qG2_000_inline_initialize
+4	4279	172		subcall __ResetSensorSubroutine, ____ResetSensorSubroutine_return
+4	5199	174	#line 5199 "NXCDefs.h"
+4	4278	174	#line 4278 "NXCDefs.h"
+4	4345	174	#line 4345 "NXCDefs.h"
+4	24	174	#line 24 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	24	174	#line 24 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	25	174		set __Wait_7qG2_ms_7qG2_000_inline_initialize, 1000
+4	24	177	#line 24 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	8551	177	#line 8551 "NXCDefs.h"
+4	8552	177		wait2 NA, __Wait_7qG2_ms_7qG2_000_inline_initialize
+4	8551	180	#line 8551 "NXCDefs.h"
+4	25	180	#line 25 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	26	180	#line 26 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	27	180		set __D0initialize, 1
+4	26	183	#line 26 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	27	183		subret __initialize_return
+4	26	185	#line 26 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	28	185	#line 28 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+4	29	185		subret __initialize_return
+5	31	0	#line 31 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	32	0	#pragma macro 7
+5	32	0		setout __OUT_BC, 2, __constVal0, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+5	5226	23	#line 5226 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	31	23	#line 31 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	31	23	#line 31 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	32	23		set __signed_stack_001turnaround, 60
+5	31	26	#line 31 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	31	26	#line 31 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	32	26		set __signed_stack_002turnaround, 510
+5	31	29	#line 31 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	31	29	#line 31 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	32	29		mov __signed_stack_003turnaround, __constValNeg100
+5	31	31	#line 31 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	31	31	#line 31 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	32	31		set __signed_stack_004turnaround, 1
+5	31	34	#line 31 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	31	34	#line 31 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	32	34		set __D0turnaround, 1
+5	32	37	#line 32 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	33	37	#pragma macro 35
+5	33	37		acquire __rotateMutex1
+5	33	38		acquire __rotateMutex2
+5	33	39		mov __rotate_ports5, __OUT_BC
+5	33	41		mov __rotate_power5, __signed_stack_001turnaround
+5	33	43		mov __rotate_angle5, __signed_stack_002turnaround
+5	33	45		mov __rotate_turnpct5, __signed_stack_003turnaround
+5	33	47		mov __rotate_sync5, __signed_stack_004turnaround
+5	33	49		mov __rotate_stop5, __D0turnaround
+5	33	51		mov __rotate_theRVP5, __constVal32
+5	33	53		mov __rotate_theRVI5, __constVal0
+5	33	55		mov __rotate_theRVD5, __constVal96
+5	33	57		subcall __RotateMotor5, ____RotateMotor5_return
+5	33	59		release __rotateMutex2
+5	33	60		release __rotateMutex1
+5	5251	61	#line 5251 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	32	61	#line 32 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	32	61	#line 32 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	33	61		set __signed_stack_001turnaround, 220
+5	32	64	#line 32 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	32	64	#line 32 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	33	64		set __signed_stack_002turnaround, 100
+5	32	67	#line 32 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	32	67	#line 32 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	33	67		set __signed_stack_003turnaround, 4
+5	32	70	#line 32 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	32	70	#line 32 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	33	70		set __D0turnaround, 0
+5	33	73	#line 33 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	34	73		acquire __SPTArgsMutex
+5	33	74	#line 33 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	34	74		mov __SPTArgs.Frequency, __signed_stack_001turnaround
+5	33	76	#line 33 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	34	76		mov __SPTArgs.Duration, __signed_stack_002turnaround
+5	33	78	#line 33 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	34	78		mov __SPTArgs.Volume, __signed_stack_003turnaround
+5	33	80	#line 33 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	34	80		mov __SPTArgs.Loop, __D0turnaround
+5	33	82	#line 33 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	34	82		syscall 10, __SPTArgs
+5	33	85	#line 33 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	34	85		mov __D0turnaround, __SPTArgs.Result
+5	33	87	#line 33 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	34	87		release __SPTArgsMutex
+5	33	88	#line 33 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	33	88	#line 33 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	34	88		set __Wait_7qG2_ms_7qG2_000_inline_turnaround, 600
+5	33	91	#line 33 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	8551	91	#line 8551 "NXCDefs.h"
+5	8552	91		wait2 NA, __Wait_7qG2_ms_7qG2_000_inline_turnaround
+5	8551	94	#line 8551 "NXCDefs.h"
+5	34	94	#line 34 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	35	94	#line 35 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	36	94		set turnarounddone, 1
+5	35	97	#line 35 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	35	97	#line 35 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	36	97	#line 36 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	37	97		set __D0turnaround, 1
+5	36	100	#line 36 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	37	100		subret __turnaround_return
+5	36	102	#line 36 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	38	102	#line 38 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+5	39	102		subret __turnaround_return
+6	50	0	#line 50 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+6	51	0		mov __D0turnright, rot_speed
+6	51	2	#line 51 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+6	52	2	#pragma macro 10
+6	52	2		acquire __OnRevMutex
+6	52	3		neg __OnRev_Tmp, __D0turnright
+6	52	6		setout __constVal2, 2, __OnRev_Tmp, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+6	52	29		release __OnRevMutex
+6	5361	30	#line 5361 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+6	51	30	#line 51 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+6	51	30	#line 51 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+6	52	30		mov __D0turnright, rot_speed
+6	52	32	#line 52 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+6	53	32	#pragma macro 7
+6	53	32		setout __constVal1, 2, __D0turnright, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+6	5368	55	#line 5368 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+6	52	55	#line 52 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+6	53	55	#line 53 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+6	54	55		set __D0turnright, 1
+6	53	58	#line 53 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+6	54	58		subret __turnright_return
+6	53	60	#line 53 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+6	55	60	#line 55 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+6	56	60		subret __turnright_return
+7	58	0	#line 58 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+7	59	0		mov __D0turnleft, rot_speed
+7	59	2	#line 59 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+7	60	2	#pragma macro 10
+7	60	2		acquire __OnRevMutex
+7	60	3		neg __OnRev_Tmp, __D0turnleft
+7	60	6		setout __constVal1, 2, __OnRev_Tmp, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+7	60	29		release __OnRevMutex
+7	5385	30	#line 5385 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+7	59	30	#line 59 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+7	59	30	#line 59 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+7	60	30		mov __D0turnleft, rot_speed
+7	60	32	#line 60 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+7	61	32	#pragma macro 7
+7	61	32		setout __constVal2, 2, __D0turnleft, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+7	5392	55	#line 5392 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+7	60	55	#line 60 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+7	61	55	#line 61 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+7	62	55		set __D0turnleft, 1
+7	61	58	#line 61 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+7	62	58		subret __turnleft_return
+7	61	60	#line 61 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+7	63	60	#line 63 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+7	64	60		subret __turnleft_return
+8	64	0	#line 64 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+8	65	0		mov __signed_stack_001drive, __drive_7qG2_speed_7qG2_000
+8	64	2	#line 64 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+8	64	2	#line 64 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+8	65	2		set __D0drive, 1
+8	66	5	#line 66 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+8	67	5	#pragma macro 7
+8	67	5		setout __OUT_BC, 2, __signed_stack_001drive, 1, __constVal7, 8, __D0drive, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+8	5418	28	#line 5418 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+8	66	28	#line 66 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+8	67	28	#line 67 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+8	68	28		set __D0drive, 1
+8	67	31	#line 67 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+8	68	31		subret __drive_return
+8	67	33	#line 67 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+8	69	33	#line 69 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+8	70	33		subret __drive_return
+9	80	0	#line 80 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+9	81	0	#pragma macro 7
+9	81	0		setout __OUT_BC, 2, __constVal0, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+9	5490	23	#line 5490 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+9	80	23	#line 80 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+9	80	23	#line 80 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+9	81	23		set __Wait_7qG2_ms_7qG2_000_inline_stopped, 600
+9	80	26	#line 80 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+9	8551	26	#line 8551 "NXCDefs.h"
+9	8552	26		wait2 NA, __Wait_7qG2_ms_7qG2_000_inline_stopped
+9	8551	29	#line 8551 "NXCDefs.h"
+9	81	29	#line 81 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+9	82	29	#line 82 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+9	83	29		set __D0stopped, 1
+9	82	32	#line 82 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+9	83	32		subret __stopped_return
+9	82	34	#line 82 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+9	84	34	#line 84 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+9	85	34		subret __stopped_return
+10	87	0	#line 87 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	88	0		getin __signed_stack_001is_on_line, __constVal1, 4
+10	87	4	#line 87 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	87	4	#line 87 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	88	4		set __D0is_on_line, 35
+10	87	7	#line 87 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	88	7		cmp 1, __D0is_on_line, __signed_stack_001is_on_line, __D0is_on_line
+10	87	11	#line 87 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	88	11		brtst 4, __ASM_Label_569, __D0is_on_line
+10	87	14	#line 87 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	88	14		getin __signed_stack_001is_on_line, __constVal2, 4
+10	87	18	#line 87 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	87	18	#line 87 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	88	18		set __D0is_on_line, 35
+10	87	21	#line 87 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	88	21		cmp 1, __D0is_on_line, __signed_stack_001is_on_line, __D0is_on_line
+10	88	25	#line 88 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	89	25		brtst 4, __ASM_Label_570, __D0is_on_line
+10	89	28	#line 89 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	90	28		set __D0is_on_line, 0
+10	89	31	#line 89 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	90	31		subret __is_on_line_return
+10	89	33	#line 89 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	90	33	#line 90 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	90	33	#line 90 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	91	33		getin __signed_stack_001is_on_line, __constVal1, 4
+10	90	37	#line 90 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	90	37	#line 90 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	91	37		set __D0is_on_line, 35
+10	90	40	#line 90 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	91	40		cmp 2, __D0is_on_line, __signed_stack_001is_on_line, __D0is_on_line
+10	90	44	#line 90 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	91	44		brtst 4, __ASM_Label_574, __D0is_on_line
+10	90	47	#line 90 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	91	47		getin __signed_stack_001is_on_line, __constVal2, 4
+10	90	51	#line 90 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	90	51	#line 90 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	91	51		set __D0is_on_line, 35
+10	90	54	#line 90 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	91	54		cmp 1, __D0is_on_line, __signed_stack_001is_on_line, __D0is_on_line
+10	91	58	#line 91 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	92	58		brtst 4, __ASM_Label_575, __D0is_on_line
+10	92	61	#line 92 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	93	61		set __D0is_on_line, 1
+10	92	64	#line 92 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	93	64		subret __is_on_line_return
+10	92	66	#line 92 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	93	66	#line 93 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	93	66	#line 93 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	94	66		getin __signed_stack_001is_on_line, __constVal1, 4
+10	93	70	#line 93 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	93	70	#line 93 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	94	70		set __D0is_on_line, 35
+10	93	73	#line 93 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	94	73		cmp 1, __D0is_on_line, __signed_stack_001is_on_line, __D0is_on_line
+10	93	77	#line 93 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	94	77		brtst 4, __ASM_Label_579, __D0is_on_line
+10	93	80	#line 93 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	94	80		getin __signed_stack_001is_on_line, __constVal2, 4
+10	93	84	#line 93 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	93	84	#line 93 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	94	84		set __D0is_on_line, 35
+10	93	87	#line 93 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	94	87		cmp 2, __D0is_on_line, __signed_stack_001is_on_line, __D0is_on_line
+10	94	91	#line 94 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	95	91		brtst 4, __ASM_Label_580, __D0is_on_line
+10	95	94	#line 95 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	96	94		set __D0is_on_line, 2
+10	95	97	#line 95 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	96	97		subret __is_on_line_return
+10	95	99	#line 95 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	98	99	#line 98 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	98	99	#line 98 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+10	99	99		subret __is_on_line_return
+11	99	0	#line 99 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	100	0		subcall is_on_line, __is_on_line_return
+11	99	2	#line 99 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	100	2		mov __signed_stack_001drive_on_line, __D0is_on_line
+11	99	4	#line 99 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	99	4	#line 99 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	100	4		set __D0drive_on_line, 0
+11	99	7	#line 99 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	100	7		cmp 4, __D0drive_on_line, __signed_stack_001drive_on_line, __D0drive_on_line
+11	100	11	#line 100 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	101	11		brtst 4, __ASM_Label_584, __D0drive_on_line
+11	100	14	#line 100 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	101	14		mov __drive_7qG2_speed_7qG2_000, d_speed
+11	100	16	#line 100 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	101	16	#line 101 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	102	16		subcall drive, __drive_return
+11	101	18	#line 101 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	102	18		mov state, __D0drive
+11	101	20	#line 101 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	101	20	#line 101 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	102	20	#line 102 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	103	20		set __D0drive_on_line, 1
+11	102	23	#line 102 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	103	23		subret __drive_on_line_return
+11	102	25	#line 102 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	103	25	#line 103 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	104	25		jmp __ASM_Label_583
+11	103	27	#line 103 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	103	27	#line 103 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	104	27		subcall is_on_line, __is_on_line_return
+11	103	29	#line 103 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	104	29		mov __signed_stack_001drive_on_line, __D0is_on_line
+11	103	31	#line 103 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	103	31	#line 103 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	104	31		set __D0drive_on_line, 1
+11	103	34	#line 103 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	104	34		cmp 4, __D0drive_on_line, __signed_stack_001drive_on_line, __D0drive_on_line
+11	104	38	#line 104 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	105	38		brtst 4, __ASM_Label_594, __D0drive_on_line
+11	105	41	#line 105 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	106	41		subcall turnleft, __turnleft_return
+11	105	43	#line 105 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	106	43		mov state, __D0turnleft
+11	105	45	#line 105 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	105	45	#line 105 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	106	45	#line 106 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	107	45		set __D0drive_on_line, 1
+11	106	48	#line 106 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	107	48		subret __drive_on_line_return
+11	106	50	#line 106 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	107	50	#line 107 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	108	50		jmp __ASM_Label_593
+11	107	52	#line 107 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	107	52	#line 107 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	108	52		subcall is_on_line, __is_on_line_return
+11	107	54	#line 107 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	108	54		mov __signed_stack_001drive_on_line, __D0is_on_line
+11	107	56	#line 107 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	107	56	#line 107 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	108	56		set __D0drive_on_line, 2
+11	107	59	#line 107 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	108	59		cmp 4, __D0drive_on_line, __signed_stack_001drive_on_line, __D0drive_on_line
+11	108	63	#line 108 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	109	63		brtst 4, __ASM_Label_602, __D0drive_on_line
+11	109	66	#line 109 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	110	66		subcall turnright, __turnright_return
+11	109	68	#line 109 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	110	68		mov state, __D0turnright
+11	109	70	#line 109 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	109	70	#line 109 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	110	70	#line 110 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	111	70		set __D0drive_on_line, 1
+11	110	73	#line 110 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	111	73		subret __drive_on_line_return
+11	110	75	#line 110 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	121	75	#line 121 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	122	75		jmp __ASM_Label_601
+11	121	77	#line 121 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	121	77	#line 121 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	122	77		getin __signed_stack_001drive_on_line, __constVal1, 4
+11	121	81	#line 121 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	121	81	#line 121 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	122	81		set __D0drive_on_line, 35
+11	121	84	#line 121 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	122	84		cmp 0, __D0drive_on_line, __signed_stack_001drive_on_line, __D0drive_on_line
+11	121	88	#line 121 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	122	88		brtst 4, __ASM_Label_610, __D0drive_on_line
+11	121	91	#line 121 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	122	91		getin __signed_stack_001drive_on_line, __constVal2, 4
+11	121	95	#line 121 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	121	95	#line 121 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	122	95		set __D0drive_on_line, 35
+11	121	98	#line 121 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	122	98		cmp 0, __D0drive_on_line, __signed_stack_001drive_on_line, __D0drive_on_line
+11	122	102	#line 122 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	123	102		brtst 4, __ASM_Label_611, __D0drive_on_line
+11	122	105	#line 122 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	123	105		set __Wait_7qG2_ms_7qG2_000_inline_drive_on_line, 100
+11	122	108	#line 122 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	8551	108	#line 8551 "NXCDefs.h"
+11	8552	108		wait2 NA, __Wait_7qG2_ms_7qG2_000_inline_drive_on_line
+11	8551	111	#line 8551 "NXCDefs.h"
+11	123	111	#line 123 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	124	111	#line 124 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	125	111		subcall stopped, __stopped_return
+11	124	113	#line 124 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	125	113		mov state, __D0stopped
+11	124	115	#line 124 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	124	115	#line 124 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	125	115	#line 125 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	126	115		set __D0drive_on_line, 3
+11	125	118	#line 125 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	126	118		subret __drive_on_line_return
+11	125	120	#line 125 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	141	120	#line 141 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	141	120	#line 141 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+11	142	120		subret __drive_on_line_return
+12	147	0	#line 147 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+12	148	0		subcall initialize, __initialize_return
+12	147	2	#line 147 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+12	148	2		mov state, __D0initialize
+12	147	4	#line 147 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+12	147	4	#line 147 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+12	149	4	#line 149 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+12	150	4		subret __task_init_return
+13	151	0	#line 151 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	152	0	#pragma macro 26
+13	152	0		acquire __RLSBmutex0
+13	152	1		mov __RLSReadBuf0, __RLSBbufLSWrite1
+13	152	3		set __RLSBytesCount0, 1
+13	152	6		wait2 NA, __constVal15
+13	152	9		subcall __ReadLSBytes0, ____ReadLSBytes0_return
+13	152	11		index __D0task_begin_with_turnaround, __RLSReadBuf0, 65535
+13	152	15		release __RLSBmutex0
+13	5815	16	#line 5815 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	151	16	#line 151 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	152	16		mov __signed_stack_001task_begin_with_turnaround, __D0task_begin_with_turnaround
+13	151	18	#line 151 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	152	18		set __D0task_begin_with_turnaround, 20
+13	151	21	#line 151 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	152	21		cmp 2, __D0task_begin_with_turnaround, __signed_stack_001task_begin_with_turnaround, __D0task_begin_with_turnaround
+13	152	25	#line 152 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	153	25		brtst 4, __ASM_Label_622, __D0task_begin_with_turnaround
+13	153	28	#line 153 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	154	28		subcall turnaround, __turnaround_return
+13	153	30	#line 153 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	154	30		mov state, __D0turnaround
+13	153	32	#line 153 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	153	32	#line 153 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	154	32	#line 154 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	155	32		set __task_begin_with_turnaround_7qG2_taskname_7qG2_000, 1
+13	154	35	#line 154 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	154	35	#line 154 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	155	35	#line 155 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	156	35		mov __DU0task_begin_with_turnaround, __task_begin_with_turnaround_7qG2_taskname_7qG2_000
+13	155	37	#line 155 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	156	37		subret __task_begin_with_turnaround_return
+13	155	39	#line 155 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	156	39	#line 156 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	157	39		jmp __ASM_Label_629
+13	157	41	#line 157 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	158	41		subcall drive_on_line, __drive_on_line_return
+13	157	43	#line 157 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	158	43		mov state, __D0drive_on_line
+13	157	45	#line 157 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	157	45	#line 157 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	161	45	#line 161 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	161	45	#line 161 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+13	162	45		subret __task_begin_with_turnaround_return
+14	163	0	#line 163 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+14	164	0		subcall drive_on_line, __drive_on_line_return
+14	163	2	#line 163 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+14	164	2		mov state, __D0drive_on_line
+14	163	4	#line 163 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+14	163	4	#line 163 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+14	165	4	#line 165 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+14	166	4		subret __task_follow_the_line_return
+15	233	0	#line 233 "C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc"
+15	234	0		subret ____initialize_global_data_return
+#CLUMPS
+Clump	Name	Offset	File
+0	main	0	C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc
+1	__RotateMotor5	86	NXTDefs.h
+2	__ResetSensorSubroutine	255	NXTDefs.h
+3	__ReadLSBytes0	268	NXTDefs.h
+4	initialize	354	C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc
+5	turnaround	541	C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc
+6	turnright	645	C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc
+7	turnleft	707	C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc
+8	drive	769	C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc
+9	stopped	804	C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc
+10	is_on_line	840	C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc
+11	drive_on_line	941	C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc
+12	task_init	1063	C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc
+13	task_begin_with_turnaround	1069	C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc
+14	task_follow_the_line	1116	C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc
+15	__initialize_global_data	1122	C:\Users\enrico\Documents\GitHub\sdp_2324\main-v3.nxc
