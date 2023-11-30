@@ -17,26 +17,29 @@ int d_speed = 40;
 int w_distance = 20;
 
 int initialize() {
-    SetSensorLight(IN_2);
-    SetSensorLight(IN_3);
-    SetSensorLowspeed(ULTRASONIC_PORT);
-    Wait(1000);
-    return STATE_DRIVE;
+   SetSensorLight(IN_2);
+   SetSensorLight(IN_3);
+   SetSensorLowspeed(ULTRASONIC_PORT);
+   // Sound for initialization
+   PlayTone(300, 1000);
+   PlayTone(400, 1000);
+   PlayTone(500, 1000);
+   return STATE_DRIVE;
 }
 
 int turnaround() {
-    RotateMotorEx(OUT_BC, 60, 510, -100, true, true);
-    Wait(600);
-    return STATE_DRIVE;
+   RotateMotorEx(OUT_BC, 60, 510, -100, true, true);
+   Wait(600);
+   return STATE_DRIVE;
 }
 
 bool wallstop() {
-     int dist = Sensor(IN_1);
-     if (dist <= 20) {
-         // Off(OUT_BC);
-         return FALSE;
-     }
-     return true;
+   int dist = Sensor(IN_1);
+   if (dist <= 20) {
+      // Off(OUT_BC);
+      return FALSE;
+   }
+   return true;
 }
 
 int turnright() {
@@ -54,65 +57,62 @@ int turnleft() {
 }
 
 int drive() {
-    OnFwd(OUT_C, d_speed * 1.1);
-    OnFwd(OUT_B, d_speed);
-    return STATE_DRIVE;
+   OnFwd(OUT_C, d_speed * 1.1);
+   OnFwd(OUT_B, d_speed);
+   return STATE_DRIVE;
 }
 
 void balldrop() {
-    Off(OUT_BC);
-    Wait(1000);
-    RotateMotor(OUT_A, 45, -90);
-    RotateMotor(OUT_A, 20, 90);
+   Off(OUT_BC);
+   Wait(1000);
+   RotateMotor(OUT_A, 45, -90);
+   RotateMotor(OUT_A, 20, 90);
 }
 
 int stopped() {
-    Off(OUT_BC);
-    Wait(600);
-    return STATE_DRIVE;
+   Off(OUT_BC);
+   Wait(600);
+   return STATE_DRIVE;
 }
-
 
 task main() {
    bool isOnLine =  true;
    state = initialize();
    while (isOnLine) {      
-         ultrasonicCM = SensorUS(ULTRASONIC_PORT);
-         if (state == STATE_DRIVE) {
-            if (Sensor(IN_2) > THRESHOLD &&  Sensor(IN_3) > THRESHOLD) {
-               state = drive();
-            }
-            if (Sensor(IN_2) <= THRESHOLD &&  Sensor(IN_3) > THRESHOLD) {
-               Wait(50);
-               state = turnleft();
-            }
-            if (Sensor(IN_2) > THRESHOLD &&  Sensor(IN_3) <= THRESHOLD) {
-               Wait(50);
-               state = turnright();
-            }
-            if (Sensor(IN_2) < THRESHOLD &&  Sensor(IN_3) < THRESHOLD) {
-               Wait(100);
-            }
-            if (ultrasonicCM < w_distance) {
-               Off(OUT_BC);
-               Wait(10);
-               if (w_counter == 0) {
-                  turnaround();
-                  Wait(20);
-                  state = drive();
-                  w_counter++;
-                  }
-               if (w_counter == 1) {
-                  Off(OUT_BC);
-                  w_counter++;
-               }
-               if (w_counter == 2) {
-                     Off(OUT_BC);
-                     balldrop();
-               }
-            }
-
+      ultrasonicCM = SensorUS(ULTRASONIC_PORT);
+      if (state == STATE_DRIVE) {
+         if (Sensor(IN_2) > THRESHOLD &&  Sensor(IN_3) > THRESHOLD) {
+            state = drive();
          }
-         
-     }
+         if (Sensor(IN_2) <= THRESHOLD &&  Sensor(IN_3) > THRESHOLD) {
+            Wait(50);
+            state = turnleft();
+         }
+         if (Sensor(IN_2) > THRESHOLD &&  Sensor(IN_3) <= THRESHOLD) {
+            Wait(50);
+            state = turnright();
+         }
+         if (Sensor(IN_2) < THRESHOLD &&  Sensor(IN_3) < THRESHOLD) {
+            Wait(100);
+         }
+         if (ultrasonicCM < w_distance) {
+            Off(OUT_BC);
+            Wait(10);
+            if (w_counter == 0) {
+               turnaround();
+               Wait(20);
+               state = drive();
+               w_counter++;
+               }
+            if (w_counter == 1) {
+               Off(OUT_BC);
+               w_counter++;
+            }
+            if (w_counter == 2) {
+                  Off(OUT_BC);
+                  balldrop();
+            }
+         }
+      }
+   }
 }
