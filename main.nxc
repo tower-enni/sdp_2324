@@ -4,16 +4,20 @@
 #define STATE_DRIVE 1
 #define STATE_STOP 2
 
-
 // Light sensors on in2 (L) and in3 (R)
 // right engine is OUTc and left is OUTb, Ball catcher is OUT_A
 bool walls;
 int ultrasonicCM;
 int state = STATE_INIT;
+// Wall/events counter
 int w_counter = 0;
-int b_counter = 0;     //ball counter
+// Ball counter for picking up and throwing
+int b_counter = 0;    
+// Speed for turning around 
 int t_speed = 50;
+// Driving speed
 int d_speed = 40;
+// Threshold for stopping in front of wall
 int w_distance = 20;
 
 int initialize() {
@@ -29,10 +33,14 @@ int initialize() {
 
 int turnaround() {
    RotateMotorEx(OUT_BC, 60, 510, -100, true, true);
-   Wait(600);
+   // Turnaround completion sound
+   PlayTone(400, 500);
+   PlayTone(400, 500);
    return STATE_DRIVE;
 }
 
+/*
+NOT YET ACTIVE
 bool wallstop() {
    int dist = Sensor(IN_1);
    if (dist <= 20) {
@@ -41,6 +49,7 @@ bool wallstop() {
    }
    return true;
 }
+*/
 
 int turnright() {
 // move the left tire
