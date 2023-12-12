@@ -33,10 +33,6 @@ int initialize() {
 
 int turnaround() {
    RotateMotorEx(OUT_BC, 60, 510, -100, true, true);
-   // Turnaround completion sound
-   PlayTone(400, 500);
-   PlayTone(400, 500);
-   return STATE_DRIVE;
 }
 
 /*
@@ -110,8 +106,8 @@ task main() {
             if (w_counter == 0) {
                turnaround();
                Wait(20);
-               state = drive();
                w_counter++;
+               state = drive();
                }
             if (w_counter == 1) {
                Off(OUT_BC);
