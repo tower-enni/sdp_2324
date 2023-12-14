@@ -1,5 +1,5 @@
 #define THRESHOLD 30
-#define L_THRES 37
+#define L_THRES 40
 #define ULTRASONIC_PORT IN_1
 #define STATE_INIT 0
 #define STATE_DRIVE 1
@@ -54,6 +54,7 @@ int turnright() {
 
 int turnleft() {
 // move the right tire
+   PlayTone(500, 1000);
    OnFwd(OUT_B, d_speed * 1.25);
    OnRev(OUT_C, d_speed * 0.7);
    return STATE_DRIVE;
@@ -85,16 +86,16 @@ task main() {
    while (isOnLine) {      
        ultrasonicCM = SensorUS(ULTRASONIC_PORT);
        if (state == STATE_DRIVE) {
-          if (Sensor(IN_2) > L_THRES &&  Sensor(IN_3) > THRESHOLD) {
+          if (Sensor(IN_2) > THRESHOLD &&  Sensor(IN_3) > THRESHOLD) {
                state = drive();
          }
          if (Sensor(IN_2) <= L_THRES &&  Sensor(IN_3) > THRESHOLD) {
             state = turnleft();
          }
-         if (Sensor(IN_2) > L_THRES &&  Sensor(IN_3) <= THRESHOLD) {
+         if (Sensor(IN_2) > THRESHOLD &&  Sensor(IN_3) <= THRESHOLD) {
             state = turnright();
          }
-         if (Sensor(IN_2) < L_THRES &&  Sensor(IN_3) < THRESHOLD) {
+         if (Sensor(IN_2) < THRESHOLD &&  Sensor(IN_3) < THRESHOLD) {
             Wait(100);
          }
          if (ultrasonicCM < w_distance) {
